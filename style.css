@@ -1,0 +1,376 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap'); */
+
+
+
+
+/* body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-size: 1000px;
+  background-image: url("https://www.psdgraphics.com/wp-content/uploads/2022/01/white-math-paper-texture.jpg");
+  background-position: center center;
+}
+
+.paper {
+  background-image: url("https://i0.wp.com/textures.world/wp-content/uploads/2018/10/2-Millimeter-Paper-Background-copy.jpg?ssl=1");
+  background-size: 500px;
+  background-position: center center;
+  padding: 20px 100px; */
+/*  min-width: 800px; */
+  
+  /* transform: rotateZ(-5deg);
+  box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
+  
+  position: absolute;
+}
+
+.paper.heart {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.paper.image {
+  padding: 10px;
+}
+.paper.image p {
+  font-size: 30px;
+}
+
+img {
+  max-height: 200px;
+  width: 100%;
+  user-select: none;
+}
+
+.paper.heart::after {
+  content: "";
+  background-image: url('https://cdn.pixabay.com/photo/2016/03/31/19/25/cartoon-1294994__340.png');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: 150px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+} */
+
+/* p {
+  font-family: 'Zeyada';
+  font-size: 50px;
+  color: rgb(0,0,100);
+  opacity: 0.75;
+  user-select: none;
+  
+  filter: drop-shadow(2px 1.5px 1px rgba(0,0,105,0.9));
+} */
+
+
+
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-image: url("https://www.psdgraphics.com/wp-content/uploads/2022/01/white-math-paper-texture.jpg");
+  background-position: center center;
+  margin: 0;
+  font-family: 'Short Stack', cursive;
+  overflow: hidden;
+}
+
+.paper {
+  background-image: url("https://i0.wp.com/textures.world/wp-content/uploads/2018/10/2-Millimeter-Paper-Background-copy.jpg?ssl=1");
+  background-size: cover;
+  background-position: center;
+  padding: 20px 80px;
+  border-radius: 15px;
+  transform: rotateZ(-3deg);
+  box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  cursor: pointer;
+  user-select: none;
+}
+
+.paper:hover {
+  transform: rotateZ(-1deg) scale(1.05);
+  box-shadow: 4px 15px 25px rgba(0, 0, 0, 0.4);
+}
+
+.paper.heart {
+  width: 180px;
+  height: 180px;
+  padding: 0;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 2px 12px 18px rgba(255, 0, 0, 0.4);
+}
+
+.paper.heart::after {
+  content: "";
+  background-image: url('https://cdn.pixabay.com/photo/2016/03/31/19/25/cartoon-1294994__340.png');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+
+.paper.image {
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.25);
+}
+
+.paper.image p {
+  font-size: 26px;
+  color: rgb(70, 70, 120);
+  margin: 10px 0;
+  font-family: 'Zeyada', cursive;
+}
+
+img {
+  max-height: 180px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+p {
+  font-family: 'Zeyada', cursive;
+  font-size: 40px;
+  color: rgb(30, 30, 90);
+  opacity: 0.8;
+  text-shadow: 1px 1px 2px rgba(0, 0, 50, 0.3);
+  margin: 5px 0;
+  transition: color 0.3s ease;
+}
+
+p:hover {
+  color: rgb(60, 60, 160);
+}
+
+.paper.red {
+  background: rgba(255, 0, 0, 0.1);
+  border: 2px solid rgba(255, 0, 0, 0.2);
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+.paper .p1 {
+  font-size: 32px;
+}
+
+.paper .p2 {
+  font-size: 36px;
+  color: rgb(200, 0, 0);
+  text-shadow: 1px 1px 2px rgba(150, 0, 0, 0.5);
+}
+
+/* Add a subtle drag indicator */
+/* .paper:last-child {
+  opacity: 0.8;
+  font-size: 20px;
+  color: rgb(100, 100, 100);
+}  */
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-image: url("https://www.psdgraphics.com/wp-content/uploads/2022/01/white-math-paper-texture.jpg");
+  background-position: center center;
+  margin: 0;
+  font-family: 'Short Stack', cursive;
+  overflow: hidden;
+}
+
+.paper {
+  background-color: #ffffff; /* White background for the paper */
+  padding: 20px 80px;
+  border-radius: 15px;
+  transform: rotateZ(-3deg);
+  box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  cursor: pointer;
+  user-select: none;
+}
+
+.paper:hover {
+  transform: rotateZ(-1deg) scale(1.05);
+  box-shadow: 4px 15px 25px rgba(0, 0, 0, 0.4);
+}
+
+.paper.heart {
+  width: 180px;
+  height: 180px;
+  padding: 0;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 2px 12px 18px rgba(255, 0, 0, 0.4);
+}
+
+.paper.heart::after {
+  content: "";
+  background-image: url('https://cdn.pixabay.com/photo/2016/03/31/19/25/cartoon-1294994__340.png');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+
+.paper.image {
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.25);
+}
+
+.paper.image p {
+  font-size: 26px;
+  color: rgb(70, 70, 120);
+  margin: 10px 0;
+  font-family: 'Zeyada', cursive;
+}
+
+img {
+  max-height: 180px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+p {
+  font-family: 'Zeyada', cursive;
+  font-size: 40px;
+  color: rgb(30, 30, 90);
+  opacity: 0.8;
+  text-shadow: 1px 1px 2px rgba(0, 0, 50, 0.3);
+  margin: 5px 0;
+  transition: color 0.3s ease;
+}
+
+p:hover {
+  color: rgb(60, 60, 160);
+}
+
+.paper.red {
+  background: rgba(255, 0, 0, 0.1);
+  border: 2px solid rgba(255, 0, 0, 0.2);
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+.paper .p1 {
+  font-size: 32px;
+}
+
+.paper .p2 {
+  font-size: 36px;
+  color: rgb(200, 0, 0);
+  text-shadow: 1px 1px 2px rgba(150, 0, 0, 0.5);
+}
+
+/* Paper Plane Animation */
+@keyframes flyPaperPlane {
+  0% {
+    top: 50%;
+    left: 10%;
+    transform: rotate(0deg);
+  }
+  25% {
+    top: 30%;
+    left: 30%;
+    transform: rotate(45deg);
+  }
+  50% {
+    top: 10%;
+    left: 50%;
+    transform: rotate(90deg);
+  }
+  75% {
+    top: 30%;
+    left: 70%;
+    transform: rotate(135deg);
+  }
+  100% {
+    top: 50%;
+    left: 90%;
+    transform: rotate(180deg);
+  }
+}
+
+.paper-plane {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  width: 50px;
+  height: 50px;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Paper_plane.svg/1024px-Paper_plane.svg.png');
+  background-size: cover;
+  animation: flyPaperPlane 5s infinite;
+}
+
+button {
+  background-color: #ff3333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff6666;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
