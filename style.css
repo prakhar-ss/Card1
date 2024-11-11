@@ -375,14 +375,4 @@ button:disabled {
   cursor: not-allowed;
 }
 
-body, .paper {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  touch-action: none;
-}
 
-.paper.dragging {
-  transition: none; /* Remove transition during drag for smoother movement */
-}
