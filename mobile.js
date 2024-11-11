@@ -1,62 +1,63 @@
 let highestZ = 1;
 
-class Paper {
+class DraggablePaper {
   holdingPaper = false;
-  touchStartX = 0;
-  touchStartY = 0;
-  currentPaperX = 0;
-  currentPaperY = 0;
+  startX = 0;
+  startY = 0;
+  currentX = 0;
+  currentY = 0;
   offsetX = 0;
   offsetY = 0;
 
-  init(paper) {
-    // Set initial position for each paper
-    const rect = paper.getBoundingClientRect();
-    this.currentPaperX = rect.left;
-    this.currentPaperY = rect.top;
-    
-    // Update styles to ensure papers start in the correct position
-    paper.style.transform = `translate(${this.currentPaperX}px, ${this.currentPaperY}px) rotateZ(0deg)`;
-    
-    paper.addEventListener('touchstart', (e) => {
-      // Prevent multitouch issues
-      if (e.touches.length > 1) return;
+  constructor(element) {
+    this.element = element;
+    this.init();
+  }
 
-      this.holdingPaper = true;
-      paper.style.zIndex = highestZ;
-      highestZ += 1;
+  init() {
+    this.element.addEventListener('touchstart', this.onTouchStart.bind(this));
+    this.element.addEventListener('touchmove', this.onTouchMove.bind(this));
+    this.element.addEventListener('touchend', this.onTouchEnd.bind(this));
+  }
 
-      this.touchStartX = e.touches[0].clientX;
-      this.touchStartY = e.touches[0].clientY;
+  onTouchStart(event) {
+    if (event.touches.length > 1) return; // Ignore multi-touch
+    this.holdingPaper = true;
 
-      // Calculate initial offset
-      this.offsetX = this.currentPaperX;
-      this.offsetY = this.currentPaperY;
-    });
+    // Set highest z-index for the dragged element
+    this.element.style.zIndex = highestZ;
+    highestZ += 1;
 
-    paper.addEventListener('touchmove', (e) => {
-      e.preventDefault();
-      if (!this.holdingPaper) return;
+    // Record the starting touch position
+    this.startX = event.touches[0].clientX;
+    this.startY = event.touches[0].clientY;
 
-      const moveX = e.touches[0].clientX - this.touchStartX;
-      const moveY = e.touches[0].clientY - this.touchStartY;
+    // Calculate initial offset
+    const rect = this.element.getBoundingClientRect();
+    this.offsetX = rect.left;
+    this.offsetY = rect.top;
+  }
 
-      // Update position with the offset values
-      this.currentPaperX = this.offsetX + moveX;
-      this.currentPaperY = this.offsetY + moveY;
+  onTouchMove(event) {
+    if (!this.holdingPaper) return;
+    event.preventDefault(); // Prevents screen scrolling during drag
 
-      paper.style.transform = `translate(${this.currentPaperX}px, ${this.currentPaperY}px) rotateZ(0deg)`;
-    });
+    // Calculate the movement
+    const moveX = event.touches[0].clientX - this.startX;
+    const moveY = event.touches[0].clientY - this.startY;
 
-    paper.addEventListener('touchend', () => {
-      this.holdingPaper = false;
-    });
+    // Update the current position based on the initial offset + movement
+    this.currentX = this.offsetX + moveX;
+    this.currentY = this.offsetY + moveY;
+
+    // Apply the transform to the element
+    this.element.style.transform = `translate(${this.currentX}px, ${this.currentY}px)`;
+  }
+
+  onTouchEnd() {
+    this.holdingPaper = false; // Release the drag state
   }
 }
 
-const papers = Array.from(document.querySelectorAll('.paper'));
-
-papers.forEach(paper => {
-  const p = new Paper();
-  p.init(paper);
-});
+// Apply the draggable feature to each card
+document.querySelectorAll('.paper').forEach(paper => new DraggablePaper(paper));
