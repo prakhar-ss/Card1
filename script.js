@@ -154,6 +154,26 @@ document.querySelectorAll(".paper").forEach((paper) => {
   const p = new Paper();
   p.init(paper);
 });
+paper.addEventListener('mousedown', (e) => {
+  // Start drag only if the target is the `.paper` container
+  if (e.target !== paper) return;
+
+  if (this.holdingPaper) return;
+  this.holdingPaper = true;
+
+  paper.style.zIndex = highestZ;
+  highestZ += 1;
+
+  if (e.button === 0) {
+    this.mouseTouchX = this.mouseX;
+    this.mouseTouchY = this.mouseY;
+    this.prevMouseX = this.mouseX;
+    this.prevMouseY = this.mouseY;
+  }
+  if (e.button === 2) {
+    this.rotating = true;
+  }
+});
 
 
 
